@@ -8,33 +8,42 @@ version = '1.0'
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
-//mainClassName="me.pjq.Main"
+sourceSets {
+    main {
+        java {
+            srcDir 'src/'
+        }
 
-//jar {
-//    manifest {
-//        attributes "Main-Class": "me.pjq.Main"
-//    }
-//
-//    from {
-//        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-//    }
-//}
+        resources {
+            srcDir 'src/resources'
+        }
+    }
+}
+
 dependencies {
     compile 'org.apache.spark:spark-core_2.10:1.3.0'
-
-//    compile fileTree(dir: '/Users/pengjianqing/Spark/spark-1.3.0-bin-hadoop2.4/lib/', include: ['*.jar'])
 }
 
 //create a single Jar with all dependencies
 task fatJar(type: Jar) {
+    exclude 'META-INF/*.RSA', 'META-INF/*.SF','META-INF/*.DSA'
+
     manifest {
         attributes 'Implementation-Title': 'Gradle Jar File Example',
                 'Implementation-Version': version,
                 'Main-Class': 'me.pjq.Main'
     }
     baseName = project.name + '-all'
-    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    from sourceSets.main.java
+//    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
     with jar
 }
 
 
+uploadArchives {
+    repositories {
+        flatDir {
+            dirs 'repos'
+        }
+    }
+}
