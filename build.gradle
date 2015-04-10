@@ -1,0 +1,18 @@
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'java'
+
+//mainClassName="me.pjq.Main"
+
+jar {
+    manifest {
+        attributes "Main-Class": "me.pjq.Main"
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
