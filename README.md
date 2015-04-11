@@ -1,5 +1,10 @@
 # SparkPlayground
 
+##How to run it
+```
+./gradlew fatJar &&  ~/Spark/spark-1.3.0-bin-hadoop2.4/bin/spark-submit --class me.pjq.Main --master spark://jianqings-mbp.lan:7077 build/libs/SparkPlayground-all-1.0.jar
+
+```
 
 ```
 gradle jar
