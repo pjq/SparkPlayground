@@ -48,11 +48,19 @@ public class CSDNWordAnalyse implements Serializable {
                 Account account = new Account(s);
                 return Arrays.asList(account);
             }
+        });
+
+        JavaRDD<Account> accountFilter = account.filter(new Function<Account, Boolean>() {
+            @Override
+            public Boolean call(Account account) throws Exception {
+                String mail = account.getEmailDomain();
+                return null != mail && mail.contains("edu");
+            }
         }).cache();
 
 
-        analyse(account, filePath, true);
-        analyse(account, filePath, false);
+        analyse(accountFilter, filePath, true);
+        analyse(accountFilter, filePath, false);
     }
 
     private void analyse(JavaRDD<Account> account, String filePath, final boolean password) {
