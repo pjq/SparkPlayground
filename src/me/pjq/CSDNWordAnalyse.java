@@ -139,16 +139,18 @@ public class CSDNWordAnalyse implements Serializable {
         }
 
         public String getEmailDomain() {
-            if (null == email) {
-                return "EMAILDOMAIN";
+            String value = email;
+
+            if (null == value) {
+                return "EMAILDOMAIN".toLowerCase();
             }
 
-            String[] mails = email.split("@");
+            String[] mails = value.split("@");
             if (mails.length == 2) {
-                return mails[1];
+                return mails[1].toLowerCase();
             }
 
-            return email;
+            return value.toLowerCase();
         }
     }
 }
