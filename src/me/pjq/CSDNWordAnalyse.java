@@ -21,7 +21,7 @@ import java.util.Date;
 public class CSDNWordAnalyse implements Serializable {
     private int count = 0;
 
-    public void count(String filePath, String appName) {
+    public void startAnalyse(String filePath, String appName) {
         SparkConf sparkConf = new SparkConf().setAppName(appName);
 
         JavaSparkContext spark = new JavaSparkContext(sparkConf);
@@ -30,15 +30,6 @@ public class CSDNWordAnalyse implements Serializable {
         doWork(file, filePath);
 
         spark.stop();
-    }
-
-    private void sleep() {
-        try {
-//            log("sleep count = " + (count++));
-//            Thread.sleep(10);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     private void doWork(JavaRDD<String> file, String filePath) {
@@ -104,7 +95,6 @@ public class CSDNWordAnalyse implements Serializable {
         JavaPairRDD<String, Integer> counts = pairRDD.reduceByKey(new Function2<Integer, Integer, Integer>() {
             @Override
             public Integer call(Integer integer, Integer integer2) throws Exception {
-                sleep();
                 return integer + integer2;
             }
         });
@@ -112,7 +102,6 @@ public class CSDNWordAnalyse implements Serializable {
         JavaRDD<Tuple2<Integer, String>> countsSwap = counts.map(new Function<Tuple2<String, Integer>, Tuple2<Integer, String>>() {
             @Override
             public Tuple2<Integer, String> call(Tuple2<String, Integer> stringIntegerTuple2) throws Exception {
-                sleep();
                 return stringIntegerTuple2.swap();
             }
         });

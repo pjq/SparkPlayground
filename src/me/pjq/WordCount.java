@@ -22,9 +22,10 @@ import java.util.Date;
 public class WordCount implements Serializable {
     private int count = 0;
 
-    public void count(String filePath, String appName) {
+    public void startAnalyse(String filePath, String appName) {
         SparkConf sparkConf = new SparkConf().setAppName(appName);
-        sparkConf.setMaster("spark://jianqings-mbp.lan:7077");
+//        sparkConf.setMaster("spark://jianqings-mbp.lan:7077");
+        sparkConf.setMaster("spark://Jianqings-MBP.local:7077");
 
         JavaSparkContext spark = new JavaSparkContext(sparkConf);
         JavaRDD<String> file = spark.textFile(filePath).cache();
