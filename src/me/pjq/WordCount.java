@@ -52,7 +52,7 @@ public class WordCount implements Serializable {
             @Override
             public Iterable<String> call(String s) throws Exception {
                 sleep();
-                return Arrays.asList(s.split("\n"));
+                return Arrays.asList(s.split(" "));
             }
         });
 
