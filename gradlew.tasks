@@ -1,0 +1,145 @@
+WARNING [Project: :client] WARNING: To shrink resources you must also enable ProGuard
+WARNING [Project: :client] WARNING: To shrink resources you must also enable ProGuard
+WARNING [Project: :client] WARNING: To shrink resources you must also enable ProGuard
+WARNING [Project: :client] WARNING: To shrink resources you must also enable ProGuard
+WARNING [Project: :merchant] WARNING: To shrink resources you must also enable ProGuard
+WARNING [Project: :merchant] WARNING: To shrink resources you must also enable ProGuard
+WARNING [Project: :merchant] WARNING: To shrink resources you must also enable ProGuard
+WARNING [Project: :merchant] WARNING: To shrink resources you must also enable ProGuard
+:tasks
+
+------------------------------------------------------------
+All tasks runnable from root project
+------------------------------------------------------------
+
+Android tasks
+-------------
+androidDependencies - Displays the Android dependencies of the project
+signingReport - Displays the signing info for each variant
+
+Build tasks
+-----------
+assemble - Assembles all variants of all applications and secondary packages.
+assembleClient - Assembles all Client builds
+assembleClientLive - Assembles all builds for flavor combination: ClientLive
+assembleClientLiveDebug - Assembles the Debug build for flavor ClientLive
+assembleClientLiveDebugTest - Assembles the Test build for the ClientLiveDebug build
+assembleClientLiveRelease - Assembles the Release build for flavor ClientLive
+assembleClientUat - Assembles all builds for flavor combination: ClientUat
+assembleClientUatDebug - Assembles the Debug build for flavor ClientUat
+assembleClientUatDebugTest - Assembles the Test build for the ClientUatDebug build
+assembleClientUatRelease - Assembles the Release build for flavor ClientUat
+assembleDebug - Assembles all Debug builds
+assembleDebugTest - Assembles the Test build for the Debug build
+assembleLive - Assembles all Live builds
+assembleMerchant - Assembles all Merchant builds
+assembleMerchantLive - Assembles all builds for flavor combination: MerchantLive
+assembleMerchantLiveDebug - Assembles the Debug build for flavor MerchantLive
+assembleMerchantLiveDebugTest - Assembles the Test build for the MerchantLiveDebug build
+assembleMerchantLiveRelease - Assembles the Release build for flavor MerchantLive
+assembleMerchantUat - Assembles all builds for flavor combination: MerchantUat
+assembleMerchantUatDebug - Assembles the Debug build for flavor MerchantUat
+assembleMerchantUatDebugTest - Assembles the Test build for the MerchantUatDebug build
+assembleMerchantUatRelease - Assembles the Release build for flavor MerchantUat
+assembleRelease - Assembles all Release builds
+assembleTest - Assembles all the Test applications
+assembleUat - Assembles all Uat builds
+build - Assembles and tests this project.
+buildDependents - Assembles and tests this project and all projects that depend on it.
+buildNeeded - Assembles and tests this project and all projects it depends on.
+clean - Deletes the build directory.
+
+Build Setup tasks
+-----------------
+init - Initializes a new Gradle build. [incubating]
+wrapper - Generates Gradle wrapper files. [incubating]
+
+Help tasks
+----------
+components - Displays the components produced by root project 'Barcode'. [incubating]
+dependencies - Displays all dependencies declared in root project 'Barcode'.
+dependencyInsight - Displays the insight into a specific dependency in root project 'Barcode'.
+help - Displays a help message.
+projects - Displays the sub-projects of root project 'Barcode'.
+properties - Displays the properties of root project 'Barcode'.
+tasks - Displays the tasks runnable from root project 'Barcode' (some of the displayed tasks may belong to subprojects).
+
+Install tasks
+-------------
+installClientLiveDebug - Installs the Debug build for flavor ClientLive
+installClientLiveDebugTest - Installs the Test build for the ClientLiveDebug build
+installClientLiveRelease - Installs the Release build for flavor ClientLive
+installClientUatDebug - Installs the Debug build for flavor ClientUat
+installClientUatDebugTest - Installs the Test build for the ClientUatDebug build
+installClientUatRelease - Installs the Release build for flavor ClientUat
+installDebugTest - Installs the Test build for the Debug build
+installMerchantLiveDebug - Installs the Debug build for flavor MerchantLive
+installMerchantLiveDebugTest - Installs the Test build for the MerchantLiveDebug build
+installMerchantLiveRelease - Installs the Release build for flavor MerchantLive
+installMerchantUatDebug - Installs the Debug build for flavor MerchantUat
+installMerchantUatDebugTest - Installs the Test build for the MerchantUatDebug build
+installMerchantUatRelease - Installs the Release build for flavor MerchantUat
+uninstallAll - Uninstall all applications.
+uninstallClientLiveDebug - Uninstalls the Debug build for flavor ClientLive
+uninstallClientLiveDebugTest - Uninstalls the Test build for the ClientLiveDebug build
+uninstallClientLiveRelease - Uninstalls the Release build for flavor ClientLive
+uninstallClientUatDebug - Uninstalls the Debug build for flavor ClientUat
+uninstallClientUatDebugTest - Uninstalls the Test build for the ClientUatDebug build
+uninstallClientUatRelease - Uninstalls the Release build for flavor ClientUat
+uninstallDebugTest - Uninstalls the Test build for the Debug build
+uninstallMerchantLiveDebug - Uninstalls the Debug build for flavor MerchantLive
+uninstallMerchantLiveDebugTest - Uninstalls the Test build for the MerchantLiveDebug build
+uninstallMerchantLiveRelease - Uninstalls the Release build for flavor MerchantLive
+uninstallMerchantUatDebug - Uninstalls the Debug build for flavor MerchantUat
+uninstallMerchantUatDebugTest - Uninstalls the Test build for the MerchantUatDebug build
+uninstallMerchantUatRelease - Uninstalls the Release build for flavor MerchantUat
+
+Verification tasks
+------------------
+check - Runs all checks.
+connectedAndroidTest - Installs and runs instrumentation tests for all flavors on connected devices.
+connectedAndroidTestClientLiveDebug - Installs and runs the tests for Build 'clientLiveDebug' on connected devices.
+connectedAndroidTestClientUatDebug - Installs and runs the tests for Build 'clientUatDebug' on connected devices.
+connectedAndroidTestMerchantLiveDebug - Installs and runs the tests for Build 'merchantLiveDebug' on connected devices.
+connectedAndroidTestMerchantUatDebug - Installs and runs the tests for Build 'merchantUatDebug' on connected devices.
+connectedCheck - Runs all device checks on currently connected devices.
+deviceAndroidTest - Installs and runs instrumentation tests using all Device Providers.
+deviceCheck - Runs all device checks using Device Providers and Test Servers.
+lint - Runs lint on all variants.
+lintClientLiveDebug - Runs lint on the ClientLiveDebug build
+lintClientLiveRelease - Runs lint on the ClientLiveRelease build
+lintClientUatDebug - Runs lint on the ClientUatDebug build
+lintClientUatRelease - Runs lint on the ClientUatRelease build
+lintDebug - Runs lint on the Debug build
+lintMerchantLiveDebug - Runs lint on the MerchantLiveDebug build
+lintMerchantLiveRelease - Runs lint on the MerchantLiveRelease build
+lintMerchantUatDebug - Runs lint on the MerchantUatDebug build
+lintMerchantUatRelease - Runs lint on the MerchantUatRelease build
+lintRelease - Runs lint on the Release build
+
+Other tasks
+-----------
+assembleDefault
+assembleReleaseApks - Assemble and name APKs for release distribution
+assembleSnapshotApks - Assemble and name APKs for snapshot distribution
+compileClientLiveDebugSources
+compileClientLiveDebugTestSources
+compileClientLiveReleaseSources
+compileClientUatDebugSources
+compileClientUatDebugTestSources
+compileClientUatReleaseSources
+compileDebugSources
+compileDebugTestSources
+compileMerchantLiveDebugSources
+compileMerchantLiveDebugTestSources
+compileMerchantLiveReleaseSources
+compileMerchantUatDebugSources
+compileMerchantUatDebugTestSources
+compileMerchantUatReleaseSources
+compileReleaseSources
+
+To see all tasks and more detail, run with --all.
+
+BUILD SUCCESSFUL
+
+Total time: 22.062 secs
